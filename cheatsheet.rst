@@ -11,6 +11,9 @@ PEP8: styleguide
 https://peps.python.org/pep-0008/
 
 
+iterable # pot să fac for pe el
+ --> iterators # "cod suspendat în execuție"
+ --> sequences
 
 
 keywords:
@@ -35,6 +38,10 @@ print()
 type()
 help()
 dir() # returnează lista atributelor obiectului
+
+import pdb # sau mai bine ipdb
+# (ipdb este pentru pdb ce este ipython pentru python)
+pdb.set_trace()
 
 
 things special about Python:
@@ -138,5 +145,44 @@ There are two hard problems in computing:
 - off-by-one errors
 
 
+"User error: replace user and press any key"
+PEBKAC: problem exists between computer and chair
+
+
+
+dacă am stricat ceva...
+=======================
+
 from builtins import print, range
+
+
+iteratori utili din standard library
+====================================
+
+enumerate(iterable)
+# exemplu
+for idx, elem in enumerate(["zero", "unu", "doi"]):
+  print(idx, elem, sep="» ")
+
+filter(func, iterable) # func must return bool
+# exemplu:
+filter(lambda x: x % 2, range(10))
+
+map(func, iterable) # func will return a processed value
+# exemplu:
+map(lambda x: x**2, range(10))
+
+zip(iter1, iter2, ...)
+# exemplu
+cities = ["București", "Brașov", "Constanța", "Iași"]
+distances = [0, 180, 242, 318]
+zip(cities, distances)
+
+from itertools import repeat
+# exemplu
+repeat("wow!", 5)
+
+from itertools import cycle
+# exemplu
+cycle(["alb", "negru"]], 5)
 
