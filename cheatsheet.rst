@@ -77,6 +77,16 @@ Make ipython the default shell:
     ],
 ```
 
+util în ipython:
+================
+%load_ext autoreload
+%autoreload 2
+
+symbolname?
+
+%timeit
+
+
 
 metode uzuale stringuri:
 ========================
@@ -104,6 +114,13 @@ metode uzuale stringuri:
 
 
 [!] .join / .split
+
+
+tot despre string-uri
+=====================
+
+r"c:\cale\etc.txt" # r introduce un "raw string"
+
 
 
 sequences:
